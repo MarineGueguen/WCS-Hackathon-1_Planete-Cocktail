@@ -12,9 +12,9 @@ class IngredientController extends AbstractController
     public function index(): string
     {
         $ingredientManager = new IngredientManager();
-        $ingredients = $ingredientManager->selectAll('title');
+        $ingredients = $ingredientManager->selectAll('ingredient_name');
 
-        return $this->twig->render('Ingredient/index.html.twig', ['ingredients' => $ingredients]);
+        return $this->twig->render('Home/index.html.twig', ['ingredients' => $ingredients]);
     }
 
     /**
