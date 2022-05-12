@@ -163,7 +163,7 @@ INSERT INTO ingredient (name, type_id, image) VALUES
 INSERT INTO ingredient (name, type_id, image, is_local) VALUES
 ('banane', 1, '/assets/images/ingredients/icons8-banana.svg', 0),
 ('ananas', 1, '/assets/images/ingredients/icons8-pineapple.svg', 0),
-('jus d'\'ananas', 1, '/assets/images/ingredients/icons8-pineapple.svg', 0),
+("jus d'ananas", 1, '/assets/images/ingredients/icons8-pineapple.svg', 0),
 ('avocat', 1, '/assets/images/ingredients/icons8-avocado.svg', 0),
 ('baie de goji', 1, '/assets/images/ingredients/icons8-goji.svg', 0),
 ('bergamote', 1, '/assets/images/ingredients/icons8-bergamot.svg', 0),
@@ -192,10 +192,10 @@ INSERT INTO ingredient (name, type_id, image) VALUES
 ('malibu', 3, '/assets/images/ingredients/icons8-alcohol.svg'),
 ('sucre de canne', 3, '/assets/images/ingredients/icons8-sugarcane.svg'),
 ('limonade', 3, '/assets/images/ingredients/icons8-soda-bottle.svg'), 
-('fleur d'\'oranger', 3, '/assets/images/ingredients/icons8-orange-blossom.svg'),
+("fleur d'oranger", 3, '/assets/images/ingredients/icons8-orange-blossom.svg'),
 ('eau', 3, '/assets/images/ingredients/icons8-bottle-of-water.svg'),
 ('lait', 3, '/assets/images/ingredients/icons8-milk-bottle.svg'),
-('cola', 1, '/assets/images/ingredients/icons8-cola.svg'),
+('cola', 1, '/assets/images/ingredients/icons8-cola.svg');
 
 INSERT INTO month_ingredient (month_id, ingredient_id) VALUES 
 (9, 1), (10, 1), (11, 1),
@@ -207,7 +207,7 @@ INSERT INTO month_ingredient (month_id, ingredient_id) VALUES
 (1, 7), (2, 7), (3, 7), (4, 7), (9, 7), (10, 7), (11, 7), (12, 7),
 (1, 8), (2, 8), (3, 8), (4, 8), (9, 8), (10, 8), (11, 8), (12, 8),
 (1, 9), (2, 9), (3, 9), (4, 9), (5, 9), (6, 9), (7, 9), (8, 9), (9, 9), (10, 9), (11, 9), (12, 9),
-(1, 10), (2, 10), (3, 10), (10, 10), (11, 10)  (12, 10),
+(1, 10), (2, 10), (3, 10), (10, 10), (11, 10), (12, 10),
 (1, 11), (2, 11), (3, 11), (9, 11), (10, 11), (11, 11), (12, 11),
 (1, 12), (2, 12), (3, 12), (10, 12), (11, 12), (12, 12),
 (1, 13), (2, 13), (3, 13), (4, 13), (5, 13), (6, 13), (7, 13), (8, 13), (9, 13), (10, 13), (11, 13), (12, 13),
