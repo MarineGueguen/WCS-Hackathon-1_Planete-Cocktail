@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `simple-mvc`
+-- Base de données :  `cocktail_de_saison`
 --
 
 -- --------------------------------------------------------
@@ -25,39 +25,334 @@ SET time_zone = "+00:00";
 --
 -- Structure de la table `item`
 --
+DROP DATABASE IF EXISTS cocktail_de_saison;
+CREATE DATABASE cocktail_de_saison;
+USE cocktail_de_saison;
 
-CREATE TABLE `item` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `month` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+);
 
---
--- Contenu de la table `item`
---
+CREATE TABLE `type` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
 
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Stuff'),
-(2, 'Doodads');
+CREATE TABLE `ingredient` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `type_id` int NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `is_local` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_ingredient_type` FOREIGN KEY (type_id) REFERENCES type(id)
+);
 
---
--- Index pour les tables exportées
---
+CREATE TABLE `month_ingredient` (
+  `month_id` int NOT NULL,
+  `ingredient_id` int NOT NULL,
+  KEY `month_ingredient_FK` (`month_id`),
+  KEY `month_ingredient_FK_1` (`ingredient_id`),
+  CONSTRAINT `fk_month_ingredient_month` FOREIGN KEY (`month_id`) REFERENCES `month` (`id`),
+  CONSTRAINT `fk_month_ingredient_ingredient` FOREIGN KEY (`ingredient_id`) REFERENCES `ingredient` (`id`)
+);
 
---
--- Index pour la table `item`
---
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`id`);
+CREATE TABLE `recipe` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `image` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
 
---
--- AUTO_INCREMENT pour les tables exportées
---
+CREATE TABLE `recipe_ingredient` (
+  `ingredient_id` int NOT NULL,
+  `recipe_id` int NOT NULL,
+  KEY `recipe_ingredient_FK` (`ingredient_id`),
+  KEY `recipe_ingredient_FK_1` (`recipe_id`),
+  CONSTRAINT `fk_recipe_ingredient_ingredient` FOREIGN KEY (`ingredient_id`) REFERENCES `ingredient` (`id`),
+  CONSTRAINT `fk_recipe_ingredient_recipe` FOREIGN KEY (`recipe_id`) REFERENCES `recipe` (`id`)
+);
 
---
--- AUTO_INCREMENT pour la table `item`
---
-ALTER TABLE `item`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+INSERT INTO month (name) VALUES ('janvier'), ('février'), ('mars'), ('avril'), ('mai'), ('juin'), ('juillet'), ('août'), ('septembre'), ('octobre'), ('novembre'), ('décembre');
+
+INSERT INTO type (name) VALUES ('fruit'), ('légume'), ('autre');
+
+-- FRUIT&LEG FROM FRANCE PART OF THE DATABASE 
+INSERT INTO ingredient (name, type_id, image) VALUES
+('brocoli', 2, ''),
+('asperge', 2, ''),
+('chou', 2, ''),
+('chou-fleur', 2, ''),
+('courge', 2, ''),
+('navet', 2, ''),
+('oignon', 2, ''),
+('poireau', 2, ''),
+('champignon', 2, ''),
+('cèleri', 2, ''),
+('carotte', 2, ''),
+('betterave', 2, ''),
+('cresson', 2, ''),
+('endive', 2, ''),
+('epinard', 2, ''),
+('mache', 2, ''),
+('salsifis', 2, ''),
+('potiron', 2, ''),
+('topinambour', 2, ''),
+('panais', 2, ''),
+('radis', 2, ''),
+('fenouil', 2, ''),
+('artichaud', 2, ''),
+('concombre', 2, ''),
+('courgette', 2, ''),
+('laitue', 2, ''),
+('petit pois', 2, ''),
+('aubergine', 2, ''),
+('blette', 2, ''),
+('haricot vert', 2, ''),
+('poivron', 2, ''),
+('ail', 2, ''),
+('basilic', 2, ''),
+('maïs', 2, ''),
+('échalotte', 2, ''),
+('chou de Bruxelles', 2, ''),
+('gingembre', 2, ''), 
+('tomate', 1, ''),
+('jus de tomate', 1, ''),
+('menthe', 1, ''),
+('abricot', 1, ''),
+('cassis', 1, ''),
+('cerise', 1, ''),
+('figue', 1, ''),
+('fraise', 1, ''),
+('framboise', 1, ''), 
+('groseille', 1, ''),
+('melon', 1, ''),
+('myrtille', 1, ''),
+('nectarine', 1, ''),
+('prune', 1, ''),
+('mirabelle', 1, ''),
+('mûre', 1, ''),
+('poire', 1, ''),
+('pomme', 1, ''),
+('quetsche', 1, ''),
+('noisette', 1, ''),
+('noix', 1, ''),
+('reine claude', 1, ''),
+('châtaigne', 1, ''),
+('coing', 1, ''), 
+('raisin', 1, ''),
+('citron', 1, ''),
+('jus de citron', 1, ''),
+('clémentine', 1, ''),
+('kiwi', 1, ''),
+('mandarine', 1, ''),
+('orange', 1, ''),
+('pamplemousse', 1, ''),
+('rhubarbe', 1, ''),
+('nectarine', 1, ''),
+('brugnon', 1, ''),
+('pêche', 1, ''),
+('pruneau', 1, ''),
+('cola', 1, ''),
+
+-- EXOTIC PART OF THE DATABASE 
+INSERT INTO ingredient (name, type_id, image, is_local) VALUES
+('banane', 1, '', 0),
+('ananas', 1, '', 0),
+('jus d'\'ananas', 1, '', 0),
+('avocat', 1, '', 0),
+('baie de goji', 1, '', 0),
+('bergamote', 1, '', 0),
+('carambole', 1, '', 0),
+('cassis', 1, '', 0),
+('kaki', 1, '', 0),
+('noix de coco', 1, '', 0),
+('lait de coco', 3, '', 0),
+('mangue', 1, '', 0), 
+('cranberry', 1, '', 0),
+('litchi', 1, '', 0), 
+('aloé véra', 1, '', 0),
+('tangello', 1, '', 0);
+
+-- OTHER MIXTURE FOR COCKTAILS 
+INSERT INTO ingredient (name, type_id, image) VALUES
+('sucre', 3, ''),
+('sirop', 3, ''), 
+('prosecco', 3, ''), 
+('champagne', 3, ''),
+('vodka', 3, ''), 
+('rhum', 3, ''),
+('alcool de litchi', 3, ''),
+('glaçon', 3, ''),
+('gin', 3, ''),
+('malibu', 3, ''),
+('sucre de canne', 3, ''),
+('limonade', 3, ''), 
+('fleur d'\'oranger', 3, ''),
+('eau', 3, ''),
+('lait', 3, ''),
+
+INSERT INTO month_ingredient (month_id, ingredient_id) VALUES 
+(9, 1),
+(10, 1),
+(11, 1),
+(4, 2),
+(5, 2),
+(6, 2),
+(1, 3),
+(2, 3),
+(3, 3),
+(10, 3),
+(11, 3),
+(12, 3),
+(1, 4),
+(2, 4),
+(3, 4), 
+(9, 4),
+(10, 4),
+(11, 4),
+(12, 4),
+(1, 5),
+(9, 5),
+(10, 5),
+(11, 5),
+(12, 5),
+(1, 6),
+(2, 6),
+(3, 6),
+(4, 6),
+(5, 6),
+(10, 6),
+(11, 6),
+(12, 6),
+(1, 7),
+(2, 7),
+(3, 7),
+(4, 7),
+(9, 7),
+(10, 7),
+(11, 7),
+(12, 7),
+(1, 8),
+(2, 8),
+(3, 8),
+(4, 8),
+(9, 8),
+(10, 8),
+(11, 8),
+(12, 8),
+(1, 9),
+(2, 9),
+(3, 9),
+(4, 9),
+(5, 9),
+(6, 9),
+(7, 9),
+(8, 9),
+(9, 9),
+(10, 9),
+(11, 9),
+(12, 9),
+(1, 10),
+(2, 10),
+(3, 10),
+(10, 10),
+(11, 10),
+(12, 10),
+(1, 11),
+(2, 11),
+(3, 11),
+(9, 11),
+(10, 11),
+(11, 11),
+(12, 11),
+(1, 12),
+(2, 12),
+(3, 12),
+(10, 12),
+(11, 12),
+(12, 12),
+(1, 13),
+(2, 13),
+(3, 13),
+(4, 13),
+(5, 13),
+(6, 13),
+(7, 13),
+(8, 13),
+(9, 13),
+(10, 13),
+(11, 13),
+(12, 13),
+(1, 14),
+(2, 14),
+(3, 14),
+(4, 14),
+(5, 14),
+(10, 14),
+(1, 15),
+(2, 15),
+(3, 15),
+(4, 15),
+(5, 15),
+(9, 15),
+(10, 15),
+(11, 15),
+(12, 15),
+(1, 16),
+(2, 16),
+(10, 16),
+(11, 16),
+(12, 16),
+(1, 17),
+(2, 17),
+(3, 17),
+(11, 17),
+(12, 17),
+(1, 18),
+(9, 18),
+(10, 18),
+(11, 18),
+(12, 18),
+(1, 19),
+(2, 19),
+(11, 19),
+(12, 19),
+(1, 20),
+(2, 20),
+(3, 20),
+(10, 20),
+(11, 20),
+(12, 20),
+(3, 21),
+(4, 21),
+(5, 21),
+(6, 21),
+(4, 22),
+(6, 22),
+(7, 22),
+(8, 22),
+(9, 22),
+(10, 22),
+(11, 22),
+(5, 23),
+(6, 23),
+(7, 23),
+(8, 23),
+(9, 23),
+(5, 24),
+(6, 24),
+(7, 24),
+(8, 24),
+(9, 24),
+(10, 24),
+(5, 25),
+(6, 25),
+(7, 25),
+(8, 25),
+(9, 25),
+(10, 25),
