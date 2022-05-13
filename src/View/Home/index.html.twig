@@ -8,15 +8,20 @@
         {{ dump(ingredients) }}
     </pre> #}
 	<div class="container px-4 py-5" id="hanging-icons">
-		<h2 class="pb-2 border-bottom text-center text-cocktail">Ingrédients de saison</h2>
-        <div cllass="container-fluid">
-		<div class="row py-5 row-cols-1 row-cols-lg-3 text-card-cocktail gy-3">
+		{# <h2 class="pb-2 border-bottom text-center text-cocktail">Ingrédients de saison</h2> #}
+		<div class="d-flex justify-content-center gap-4 align-items-center">
+			<a class="btn btn-bg-cocktail" href="/month?id={{ month.id - 1 }}"><i class="bi bi-patch-minus-fill"></i></a>
+			<h2 class="mt-5 mb-2 text-center text-cocktail">Nous sommes en {{ month.name }}</h2>
+			<a class="btn btn-bg-cocktail" href="/month?id={{ month.id + 1 }}"><i class="bi bi-patch-plus-fill"></i></i></a>
+		</div>
+		<div class="container-fluid">
+		<div class="row py-5 text-card-cocktail gy-3 gap-2 justify-content-evenly">
         {% for ingredient in ingredients %}
-			<div class="col d-flex align-items-center justify-content-evenly bg-card-cocktail p-2 border border-dark text-card-cocktail">
+			<div class="shadow col col-3 gap-2 d-flex align-items-center justify-content-evenly bg-card-cocktail p-2 border border-dark text-card-cocktail">
 				<div class="icon-square flex-shrink-0 me-3">
-					<img class="bi" src="{{ ingredient.image }}" alt="picture of {{ ingredient.ingredient_name }}">
+					<img class="bi" src="{{ ingredient.ingredient_image }}" alt="picture of {{ ingredient.ingredient_name }}">
 				</div>
-				<div>
+				<div class="text-center">
 					<h2 class="text-center">{{ ingredient.ingredient_name|title }}</h2>
 					<p class="text-center">{{ ingredient.type_name|title }}</p>
 					<a href="/recipes?id={{ ingredient.id }}" class="btn-cocktail btn-cocktail-color ">
