@@ -1,0 +1,60 @@
+:root {
+    --white-russian: hsl(42.86, 51.22%, 91.96%);
+    --bloody-mary: hsl(5.93, 78.18%, 56.86%);
+    --sex-on-the-beach: hsl(27.67, 79.42%, 52.35%);
+    --soft-curaçao: rgb(15, 151, 214);
+    --gold-strike: hsl(47.86, 87.82%, 61.37%);
+    --very-pink: rgb(253, 169, 185);
+}
+
+.bg-cocktail {
+    background-color: var(--very-pink);
+}
+
+.bg-card-cocktail {
+    background-color: var(--white-russian);
+}
+
+.text-cocktail {
+    color: var(--white-russian);
+}
+
+.text-card-cocktail {
+    color: var(--soft-curaçao);
+}
+
+/* Buttons */
+.btn-cocktail-color {
+    color: var(--white-russian);
+    background-color: var(--soft-curaçao);
+    border-color: var(--soft-curaçao);
+}
+
+.btn-cocktail {
+display: inline-block;
+font-weight: 400;
+line-height: 1.5;
+color: var(--white-russian);
+text-align: center;
+text-decoration: none;
+vertical-align: middle;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+/* background-color: transparent; */
+border: 1px solid transparent;
+padding: 0.375rem 0.75rem;
+font-size: 1rem;
+border-radius: 0.25rem;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.cocktail-image {
+    width: 25rem;
+    height: auto;
+}
+
+.show-card {
+    width: 55rem;
+}
