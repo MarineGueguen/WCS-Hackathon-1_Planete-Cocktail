@@ -109,6 +109,13 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
     height: auto;
 }
 
+
+.cocktail-cardImage2 {
+    width: 150px;
+    height: 150px; 
+    object-fit: cover;
+}
+
 .remove-bulletpoints {
     list-style-type: none;
 }
@@ -116,3 +123,4 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
 .border-curaçao {
     border-color: var(--soft-curaçao)!important;
 }
+

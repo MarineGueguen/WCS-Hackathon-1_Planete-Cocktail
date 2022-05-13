@@ -2,13 +2,7 @@
 
 {% block content %}
 <main class="container">
-	<h1 class="mt-5 mb-2 text-center text-cocktail">Planète Cocktail</h1>
-    <p class="text-center text-cocktail">Lève ton verre à la planète</p>
-	{# <pre>
-        {{ dump(ingredients) }}
-    </pre> #}
-	<div class="container px-4 py-5" id="hanging-icons">
-		{# <h2 class="pb-2 border-bottom text-center text-cocktail">Ingrédients de saison</h2> #}
+	<div class="container px-4 pb-5" id="hanging-icons">
 		<div class="d-flex justify-content-center gap-4 align-items-center">
 			<a class="btn btn-bg-cocktail" href="/month?id={{ month.id - 1 }}"><i class="bi bi-patch-minus-fill"></i></a>
 			<h2 class="mt-5 mb-2 text-center text-cocktail">Nous sommes en {{ month.name }}</h2>
