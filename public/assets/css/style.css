@@ -73,3 +73,7 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
 
     height: auto;
 }
+
+.remove-bulletpoints {
+        list-style-type: none;
+}
