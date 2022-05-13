@@ -11,7 +11,7 @@ class IngredientManager extends AbstractManager
      */
     public function selectAllIngredients(string $orderBy = '', string $direction = 'ASC'): array
     {
-        $query = 'SELECT i.id, i.name AS ingredient, i.type_id, i.image, t.name AS type
+        $query = 'SELECT i.id, i.name AS ingredient_name, i.type_id, i.image, t.name AS type
         FROM ' . static::TABLE . ' AS i
         INNER JOIN type AS t 
         ON i.type_id = t.id';
