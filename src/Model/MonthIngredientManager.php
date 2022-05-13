@@ -15,7 +15,7 @@ class MonthIngredientManager extends AbstractManager
         ON mi.ingredient_id = i.id
         INNER JOIN type AS t
         ON i.type_id = t.id
-        WHERE mi.month_id = :id');
+        WHERE mi.month_id = :id AND i.type_id != 3');
 
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();

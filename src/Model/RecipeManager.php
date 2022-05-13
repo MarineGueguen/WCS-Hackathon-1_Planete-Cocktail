@@ -7,6 +7,18 @@ class RecipeManager extends AbstractManager
     public const TABLE = 'recipe';
 
     /**
+     * Search recipe in database
+     */
+    public function searchRecipesByName(string $recipe): array|false
+    {
+        $statement = $this->pdo->prepare("SELECT * FROM " . self::TABLE . " WHERE name LIKE :name");
+        $statement->bindValue('name', '%' . $recipe . '%', \PDO::PARAM_STR);
+        $statement->execute();
+
+        return $statement->fetchAll();
+    }
+
+    /**
      * Insert new recipe in database
      */
     public function insert(array $recipe): int
