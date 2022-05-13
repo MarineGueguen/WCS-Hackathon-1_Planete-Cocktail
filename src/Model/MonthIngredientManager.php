@@ -9,7 +9,7 @@ class MonthIngredientManager extends AbstractManager
     public function selectAllIngredientsByMonthId(int $id): array|false
     {
         $statement = $this->pdo->prepare('SELECT i.name AS ingredient_name, i.image AS ingredient_image, 
-        t.name AS type, i.is_local
+        t.name AS type, i.is_local, i.id AS ingredient_id
         FROM ' . self::TABLE . ' AS mi
         INNER JOIN ingredient AS i
         ON mi.ingredient_id = i.id
