@@ -163,7 +163,7 @@ INSERT INTO ingredient (name, type_id, image) VALUES
 INSERT INTO ingredient (name, type_id, image, is_local) VALUES
 ('banane', 1, '/assets/images/ingredients/icons8-banana.svg', 0),
 ('ananas', 1, '/assets/images/ingredients/icons8-pineapple.svg', 0),
-("jus d'ananas", 1, '/assets/images/ingredients/icons8-pineapple.svg', 0),
+("jus d'ananas", 3, '/assets/images/ingredients/icons8-pineapple.svg', 0),
 ('avocat', 1, '/assets/images/ingredients/icons8-avocado.svg', 0),
 ('baie de goji', 1, '/assets/images/ingredients/icons8-goji.svg', 0),
 ('bergamote', 1, '/assets/images/ingredients/icons8-bergamot.svg', 0),
