@@ -29,6 +29,14 @@ class RecipeController extends AbstractController
         return $this->twig->render('Recipe/show.html.twig', ['recipe' => $recipe]);
     }
 
+    public function showRecipesByIngredients(int $ingredientId)
+    {
+        $recipeManager = new RecipeManager();
+        $recipes = $recipeManager->selectAllRecipesByIngredientId($ingredientId);
+
+        return $this->twig->render('Recipe/recipes.html.twig', ['recipes' => $recipes]);
+    }
+
     /**
      * Edit a specific recipe
      */
