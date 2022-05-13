@@ -303,82 +303,82 @@ INSERT INTO month_ingredient (month_id, ingredient_id) VALUES
 (11, 117), (12,117), (1, 117), (2,117);
 
 INSERT INTO recipe (name, description, image) VALUES
-('Détox', "Commencez par épluchez les carottes puis coupez-les en rondelles.<br>
-Epépinez la pomme et coupez-la en rondelles.<br>
-Mettez dans un Blender tous les ingrédients.<br>
-Mixez jusqu’à l’obtention d’une texture bien lisse et crémeuse.<br>
+('Détox', "Commencez par épluchez les carottes puis coupez-les en rondelles.
+Epépinez la pomme et coupez-la en rondelles.
+Mettez dans un Blender tous les ingrédients.
+Mixez jusqu’à l’obtention d’une texture bien lisse et crémeuse.
 Servez et régalez-vous.", 'https://images2.imgbox.com/d1/48/VlSdgyu3_o.jpg'),
-('Mimosa', "Si vous avez opté pour des oranges fraîches, pressez-les puis transvasez 6 cl dans chaque coupe. <br>
+('Mimosa', "Si vous avez opté pour des oranges fraîches, pressez-les puis transvasez 6 cl dans chaque coupe. 
 Ensuite, versez le champagne par-dessus. Voilà, le tour est joué, votre cocktail mimosa est déjà prêt !", 'https://images2.imgbox.com/73/b9/e3jYRND1_o.jpeg'),
-('Pamplemoussade', "Versez le jus de pamplemousse et le gingembre dans un long verre puis mélangez doucement à l’aide d’une cuillère.<br>
-Ajoutez quelques glaçons puis complétez avec le champagne à hauteur désirée.<br>
+('Pamplemoussade', "Versez le jus de pamplemousse et le gingembre dans un long verre puis mélangez doucement à l’aide d’une cuillère.
+Ajoutez quelques glaçons puis complétez avec le champagne à hauteur désirée.
 Découpez un quart de votre tranche de pamplemousse puis disposez-la sur votre verre en guise de décoration.", 'https://images2.imgbox.com/10/38/A7h42auk_o.jpg'),
-("Margarita à l’orange", "Dans un premier temps, rincez et séchez les oranges. Coupez ensuite deux rondelles fines que vous viendrez découper en 2 pour le décor.<br>
-Pressez les oranges et les citrons.<br>
-Dans une grande carafe, mélangez le jus d’orange et de citron avec le Cointreau, la tequila et le sirop de sucre de canne.<br>
-Pour décorer le bord du verre, deux choix s’offrent à vous : avec du sucre ou du sel. <br>
+("Margarita à l’orange", "Dans un premier temps, rincez et séchez les oranges. Coupez ensuite deux rondelles fines que vous viendrez découper en 2 pour le décor.
+Pressez les oranges et les citrons.
+Dans une grande carafe, mélangez le jus d’orange et de citron avec le Cointreau, la tequila et le sirop de sucre de canne.
+Pour décorer le bord du verre, deux choix s’offrent à vous : avec du sucre ou du sel. 
 Pour terminer, remplissez chacun des verres, ajoutez la glace pilée, disposez le quartier d’orange en décoration et le tour est joué !", 'https://images2.imgbox.com/17/a2/zFAJvX94_o.jpg'),
 ('Paloma', "Réservez les verres à cocktails au congélateur quelques minutes.<br
-Une fois bien frais, versez dans chacun d’eux 4 cl de tequila puis ajoutez le jus de pamplemousse et citron vert.<br>
+Une fois bien frais, versez dans chacun d’eux 4 cl de tequila puis ajoutez le jus de pamplemousse et citron vert.
 Terminez par un peu d’eau gazeuse et servez aussitôt les Palomas", 'https://images2.imgbox.com/21/6b/Y5e1TSAS_o.jpg'),
-('Gin Tonic Epicé', "Récolter le zeste d’un pamplemousse et en récupérer le jus. Faire chauffer le jus et le zeste avec 1 bâton de cannelle pendant 30 minutes à couvert.<br>
-Filtrer le jus à l’aide d’un tamis et le verser dans chaque verre. Couper 4 quartiers de pamplemousse et presser le reste. Verser le jus obtenu ainsi que le gin et l’eau pétillante.<br>
+('Gin Tonic Epicé', "Récolter le zeste d’un pamplemousse et en récupérer le jus. Faire chauffer le jus et le zeste avec 1 bâton de cannelle pendant 30 minutes à couvert.
+Filtrer le jus à l’aide d’un tamis et le verser dans chaque verre. Couper 4 quartiers de pamplemousse et presser le reste. Verser le jus obtenu ainsi que le gin et l’eau pétillante.
 Dans chaque verre, déposer 2 glaçons et garnir avec un quartier de pamplemousse et 1 demi-bâton de cannelle.", 'https://images2.imgbox.com/b9/56/ys18NTQo_o.jpg'),
-('Sangria blanche', "Presser les deux citrons verts pour en récolter le jus. Mélanger le vin et le jus de citron vert.<br>
-Couper les pêches jaunes et blanches en quartiers puis les ajouter au mélange précédent.<br>
+('Sangria blanche', "Presser les deux citrons verts pour en récolter le jus. Mélanger le vin et le jus de citron vert.
+Couper les pêches jaunes et blanches en quartiers puis les ajouter au mélange précédent.
 Ajouter la limonade et les glaçons puis servir cette pétillante sangria blanche.", 'https://images2.imgbox.com/1a/4a/llfWYIfo_o.jpg'),
-('Tequila Sunrise', "Dans un verre à cocktail, mélanger le jus de citron et la tequila puis ajouter les glaçons et le jus d’orange.<br>
+('Tequila Sunrise', "Dans un verre à cocktail, mélanger le jus de citron et la tequila puis ajouter les glaçons et le jus d’orange.
 Terminer en versant délicatement le sirop de grenadine avant de déguster cette rafraîchissante tequila sunrise.", 'https://images2.imgbox.com/1a/4a/llfWYIfo_o.jpg'),
-('Spritz', "Verser l’Apérol dans un verre à cocktail. Ajouter le vin blanc pétillant et les glaçons.<br>
+('Spritz', "Verser l’Apérol dans un verre à cocktail. Ajouter le vin blanc pétillant et les glaçons.
 Ajouter l’eau tonique et terminer par quelques rondelles ou quartiers d’orange sanguine non traitée.", 'https://images2.imgbox.com/a4/4d/HfKBDywc_o.jpg'),
-('Mojito framboise', "Dans un grand verre, déposer les tranches ou quartiers de citron vert, les framboises, le sucre et quelques feuilles de menthe. Écraser le tout à l’aide d’un pilon ou d’une cuillère afin d’obtenir une purée.<br>
+('Mojito framboise', "Dans un grand verre, déposer les tranches ou quartiers de citron vert, les framboises, le sucre et quelques feuilles de menthe. Écraser le tout à l’aide d’un pilon ou d’une cuillère afin d’obtenir une purée.
 Ajouter les glaçons ou la glace pilée et arrosée de rhum et eau pétillante. Mélanger bien.", 'https://images2.imgbox.com/31/71/VFtKsSI6_o.jpg'),
 ('Vodka Pastèque', "La veille, couper la pastèque en deux puis vider une des deux moitiés et la déposer dans un mixeur. Réserver l’autre moitié au réfrigérateur.
-Verser le jus obtenu dans des bacs à glaçons et réserver au congélateur.<br>
-Le lendemain, mixer la seconde moitié de pastèque jusqu’à obtenir un jus homogène. Filtrer la préparation puis ajouter les glaçons à la pastèque.<br>
+Verser le jus obtenu dans des bacs à glaçons et réserver au congélateur.
+Le lendemain, mixer la seconde moitié de pastèque jusqu’à obtenir un jus homogène. Filtrer la préparation puis ajouter les glaçons à la pastèque.
 Incorporer le jus de citron et la vodka. Mélanger puis agrémenter de morceaux de pastèque et rondelles de citrons verts.", 'https://imgbox.com/IvP0p9gW'),
-('Granité ananas-pêche au vin blanc', "Dans un mixeur, placer tous les ingrédients et mixer jusqu’à l’obtention d’un mélange homogène.<br>
+('Granité ananas-pêche au vin blanc', "Dans un mixeur, placer tous les ingrédients et mixer jusqu’à l’obtention d’un mélange homogène.
 Verser la préparation dans un verre puis ajouter la glace pilée.", 'https://images2.imgbox.com/0d/2e/y5TtcBTQ_o.jpg'),
-('Prosecco fraise-melon', "Coupez une extrémité de votre melon, saisissez une cuillère à soupe et retirez la chair du fruit en épépinant les morceaux.<br>
-Déposez dans un mixeur la chair du melon ainsi que les fraises, la vodka et le miel. Mixez.<br>
-Versez le cocktail dans un bac à glaçons et agrémentez de feuilles de menthe. Placer 2 h au congélateur.<br>
+('Prosecco fraise-melon', "Coupez une extrémité de votre melon, saisissez une cuillère à soupe et retirez la chair du fruit en épépinant les morceaux.
+Déposez dans un mixeur la chair du melon ainsi que les fraises, la vodka et le miel. Mixez.
+Versez le cocktail dans un bac à glaçons et agrémentez de feuilles de menthe. Placer 2 h au congélateur.
 Sortez du congélateur et mixer avec 200 ml de prosecco. Servez immédiatement !", 'https://images2.imgbox.com/64/03/zJG3vhBR_o.png'),
-('Gin Tonic Concombre', "Pelez le concombre et réalisez de très fines lamelles à l’aide d’une mandoline ou d’un économe. Dans un grand verre, déposez les glaçons et quelques tranches de concombres.<br>
-Arrosez le tout de menthe puis ajoutez le gin et le schweppes tonic. Accompagnez le cocktail avec un zeste de citron vert.<br>
+('Gin Tonic Concombre', "Pelez le concombre et réalisez de très fines lamelles à l’aide d’une mandoline ou d’un économe. Dans un grand verre, déposez les glaçons et quelques tranches de concombres.
+Arrosez le tout de menthe puis ajoutez le gin et le schweppes tonic. Accompagnez le cocktail avec un zeste de citron vert.
 Servez le gin tonic bien frais avec une rondelle de citron et profitez de sa délicieuse saveur.", 'https://images2.imgbox.com/b4/64/XJpwiVOS_o.jpg'),
-('Oranade', "Coupez la grenade en deux, récoltez le jus et prélevez les graines. Répartissez dans 4 verres. Ajoutez le sirop de grenadine.<br>
-Versez le champagne en inclinant légèrement le verre pour qu'il ne se mélange pas entièrement avec la grenadine.<br>
+('Oranade', "Coupez la grenade en deux, récoltez le jus et prélevez les graines. Répartissez dans 4 verres. Ajoutez le sirop de grenadine.
+Versez le champagne en inclinant légèrement le verre pour qu'il ne se mélange pas entièrement avec la grenadine.
 Mettez les glaçons et les rondelles d'orange. Décorez avec une pointe de thym avant de servir.", 'https://images2.imgbox.com/f0/8a/QMBocwVU_o.jpg'),
-('Cocktail fruité', "Lavez et séchez le basilic et mettez-le dans une carafe. Lavez le concombre et coupez-le en rondelles fines en biais. Ajoutez dans la carafe.<br>
-Lavez et séchez les prunes, coupez-les en deux et ôtez le noyau. Coupez en lamelles. Lavez la pomme, coupez-la en deux et ôtez le trognon. Détaillez en tranches fines. Mettez les fruits émincés dans la carafe.<br>
-Remplissez avec les 2 jus, ajouter la tequila, puis réservez au réfrigérateur pendant 1 heure.<br>
+('Cocktail fruité', "Lavez et séchez le basilic et mettez-le dans une carafe. Lavez le concombre et coupez-le en rondelles fines en biais. Ajoutez dans la carafe.
+Lavez et séchez les prunes, coupez-les en deux et ôtez le noyau. Coupez en lamelles. Lavez la pomme, coupez-la en deux et ôtez le trognon. Détaillez en tranches fines. Mettez les fruits émincés dans la carafe.
+Remplissez avec les 2 jus, ajouter la tequila, puis réservez au réfrigérateur pendant 1 heure.
 Mettez quelques glaçons dans 4 verres et versez le cocktail avec les fruits. Décorez avec du basilic avant de servir.", 'https://images2.imgbox.com/6a/b1/4hOsL9kT_o.jpg'),
-('Cocktail mûre-airelles', "Mettez les mûres au congélateur pendant au moins 1 heure. Lavez et effeuillez un brin de thym.<br>
-Réservez huit mûres au congélateur pour la finition. Mettez le reste dans un mixeur. Ajoutez le jus de cranberry et le thym effeuillé. Mixez jusqu'à l'obtention d'un jus homogène. Ajouter la vodka.<br>
+('Cocktail mûre-airelles', "Mettez les mûres au congélateur pendant au moins 1 heure. Lavez et effeuillez un brin de thym.
+Réservez huit mûres au congélateur pour la finition. Mettez le reste dans un mixeur. Ajoutez le jus de cranberry et le thym effeuillé. Mixez jusqu'à l'obtention d'un jus homogène. Ajouter la vodka.
 Répartissez le jus dans quatre verres en le passant au travers d'une passoire fine. Ajoutez quelques glaçons, les mûres réservées et un brin de thym.", 'https://images2.imgbox.com/46/37/Rii4P1Dj_o.jpg'),
 ('Brocolicieux', "Placez tous les ingrédients dans le blender et mixez. Versez dans un verre et décorez d’une tranche de pomme.", 'https://images2.imgbox.com/f8/54/PVwerTVH_o.jpg'),
-('La veuve noire', "Mixez finement les mûres avec les feuilles de romarin, le jus de citron et le miel. Versez le Mezcal, mélangez bien et passez au tamis.<br>
+('La veuve noire', "Mixez finement les mûres avec les feuilles de romarin, le jus de citron et le miel. Versez le Mezcal, mélangez bien et passez au tamis.
 Remplissez un verre de glaçons. Versez le cocktail et terminez par un trait d’eau pétillante. Décorez de mûres.", 'https://images2.imgbox.com/66/1e/tzYaxwzP_o.jpg'),
 ('Le Hulk', "Mixez tous les ingrédients au blender. Versez dans un verre et décorez de baies de goji et de cresson.", 'https://images2.imgbox.com/fe/3b/Ab7MMJVm_o.jpg'),
-('Sangria pomme, orange, grenade', " Versez le vin et le jus de grenade dans une grande carafe. Ajoutez 2 bâtons de cannelle. Nettoyez soigneusement l'orange et la pomme (de préférence bio). Découpez-les en tranches, puis en triangles. Ajoutez à la préparation. Découpez la grenade en deux, récupérez les graines et ajoutez à la préparation (si la grenade est grosse, une partie des graines suffit). Versez le miel. Mélangez le tout.<br>
+('Sangria pomme, orange, grenade', " Versez le vin et le jus de grenade dans une grande carafe. Ajoutez 2 bâtons de cannelle. Nettoyez soigneusement l'orange et la pomme (de préférence bio). Découpez-les en tranches, puis en triangles. Ajoutez à la préparation. Découpez la grenade en deux, récupérez les graines et ajoutez à la préparation (si la grenade est grosse, une partie des graines suffit). Versez le miel. Mélangez le tout.
 Placez la carafe au frigo minimum 2 h (de préférence une nuit).", 'https://images2.imgbox.com/30/61/zBzuc4qB_o.jpg'),
-('Summer vibes', "Ajoutez le jus de betterave, le sucre, la cannelle, le jus de citron et le rhum. Ajoutez les glaçons dans le shaker, puis remuez vigoureusement.<br>
+('Summer vibes', "Ajoutez le jus de betterave, le sucre, la cannelle, le jus de citron et le rhum. Ajoutez les glaçons dans le shaker, puis remuez vigoureusement.
 Versez le contenu dans un verre à vin en le filtrant à l’aide d’une passoire.", 'https://images2.imgbox.com/70/30/7nJfEGiR_o.jpeg'),
-('Mojito potiron', " Préparez le cocktail au verre. Pour chaque verre, disposez dans un shaker 10 feuilles de menthe, 1 c à s de sucre de canne, 40 cl de rhum, 1 c à s de purée de potiron et le jus d'1/2 citron vert. Complétez le shaker avec des glaçons. Secouez pour mélanger et refroidir la préparation.<br>
+('Mojito potiron', " Préparez le cocktail au verre. Pour chaque verre, disposez dans un shaker 10 feuilles de menthe, 1 c à s de sucre de canne, 40 cl de rhum, 1 c à s de purée de potiron et le jus d'1/2 citron vert. Complétez le shaker avec des glaçons. Secouez pour mélanger et refroidir la préparation.
 Versez dans un verre à mojito au travers d'un tamis. Allongez à l'eau pétillante. Décorez avec quelques glaçons et une branche de menthe.", 'https://images2.imgbox.com/85/93/ntUtFzB7_o.jpg'),
 ('Punch poire, ananas, gingembre', "Lavez la poire et passez-la à la centrifugeuse. Mélangez la purée obtenue, dans un shaker ou dans un bocal, avec le jus d'ananas, le sirop de gingembre, le rhum, la menthe et des glaçons. Secouez vigoureusement et réservez, 30 mn, au frigo.", 'https://images2.imgbox.com/06/35/7OxTw8TH_o.jpg'),
-('Rhubarbe sour', "Préparez le sirop de rhubarbe : coupez la rhubarbe en morceaux, versez-les dans une casserole et portez à ébullition avec le sucre, l'eau et le gingembre. Laisser mijoter, 15 min, à feu doux. Filtrez et laissez refroidir.<br>
+('Rhubarbe sour', "Préparez le sirop de rhubarbe : coupez la rhubarbe en morceaux, versez-les dans une casserole et portez à ébullition avec le sucre, l'eau et le gingembre. Laisser mijoter, 15 min, à feu doux. Filtrez et laissez refroidir.
 Dans un shaker, versez le sirop de rhubarbe, le jus de citron, le gin et des glaçons et secouez. Remplissez les verres de glaçons et versez le cocktail. Terminez avec une tranche de citron et un brin de menthe. ", 'https://images2.imgbox.com/ba/b1/yRHgNUDb_o.jpg'),
-('DaÏquiri céleri', "Humecter le rebord de deux verres à margarita avec un quartier de lime et les tremper dans le sucre. Réserver.<br>
+('DaÏquiri céleri', "Humecter le rebord de deux verres à margarita avec un quartier de lime et les tremper dans le sucre. Réserver.
 Au mélangeur, réduire tous les ingrédients en purée lisse (slush). Verser dans les verres et garnir d’un quartier de lime, si désiré.", 'https://images2.imgbox.com/e5/97/GiYWMaqe_o.jpg'),
-('Avocado Daîquiri', "Vous mettez tous les ingrédients dans un blender ou dans un skaker.<br>
-Vous mixez quelques secondes ou vous secouez quelques minutes jusqu’à ce que ce soit bien lisse.<br>
+('Avocado Daîquiri', "Vous mettez tous les ingrédients dans un blender ou dans un skaker.
+Vous mixez quelques secondes ou vous secouez quelques minutes jusqu’à ce que ce soit bien lisse.
 Servez avec une rondelle de citron vert.", 'https://images2.imgbox.com/25/01/okSCyZMp_o.jpg'),
-('Le Saint Patrick', "Versez le gin, le jus (kiwi/fenouil/vert de blette/citron), dans la partie Inférieure du shaker. Ajoutez les glaçons.<br>
-Ajustez la partie supérieure le shaker. Agitez vivement le shaker 8 à 10 seconde.<br>
+('Le Saint Patrick', "Versez le gin, le jus (kiwi/fenouil/vert de blette/citron), dans la partie Inférieure du shaker. Ajoutez les glaçons.
+Ajustez la partie supérieure le shaker. Agitez vivement le shaker 8 à 10 seconde.
 Servir dans un verre à martini.", 'https://images2.imgbox.com/a7/28/W02M64IP_o.jpg'),
-('Cointreau carotte', "Écrasez au pilon le basilic dans un verre. <br>
-Ajoutez les autres ingrédients avec des glaçons et mélangez.<br>
+('Cointreau carotte', "Écrasez au pilon le basilic dans un verre. 
+Ajoutez les autres ingrédients avec des glaçons et mélangez.
 Décorez d'une feuille de basilic.", 'https://images2.imgbox.com/41/b6/a7KiCtqW_o.jpg'),
 ("Le P'tit chou", "Placer tous les ingrédients dans une machine à jus et mixer. Placer ensuite le mélange dans le shaker et secouer. Verser le tout dans un verre avec des glaçons. Garnir de chou kale sec.", 'https://images2.imgbox.com/bf/31/7CbtmnL0_o.jpg');
 
