@@ -15,4 +15,5 @@ return [
     'items/delete' => ['ItemController', 'delete',],
 
     'recipes/show' => ['RecipeController', 'show', ['id']],
+    'recipes' => ['RecipeController', 'showRecipesByIngredient',['id']],
 ];

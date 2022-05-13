@@ -51,7 +51,7 @@ class RecipeManager extends AbstractManager
     public function selectAllRecipesByIngredientId(int $id): array|false
     {
         $statement = $this->pdo->prepare('SELECT r.name AS recipe_name, r.image AS recipe_image, 
-        r.description AS recipe_steps
+        r.description AS recipe_steps, i.name AS ingredient_name
         FROM ' . self::TABLE . ' AS ri
         INNER JOIN recipe AS r
         ON ri.recipe_id = r.id

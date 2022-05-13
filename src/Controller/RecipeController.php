@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\IngredientManager;
 use App\Model\RecipeManager;
 use App\Model\IngredientRecipeManager;
 
@@ -23,18 +24,27 @@ class RecipeController extends AbstractController
      */
     public function show(int $id): string
     {
+        if ($_SERVER['REQUEST_METHOD'] === 'GET'){
+            $id = ($_GET['id']);
+        }
         $recipeManager = new RecipeManager();
         $recipe = $recipeManager->selectOneById($id);
 
         return $this->twig->render('Recipe/show.html.twig', ['recipe' => $recipe]);
     }
 
-    public function showRecipesByIngredients(int $ingredientId)
-    {
-        $recipeManager = new RecipeManager();
-        $recipes = $recipeManager->selectAllRecipesByIngredientId($ingredientId);
+    public function showRecipesByIngredient(int $id)
+    {   
+        if ($_SERVER['REQUEST_METHOD'] === 'GET'){
+            $id = ($_GET['id']);
+        }
+        $recipeIngredientManager = new IngredientRecipeManager();
+        $ingredientManager = new IngredientManager();
+        $recipes = $recipeIngredientManager->selectAllRecipesByIngredientId($id);
+        $ingredient = $ingredientManager->selectOneById($id);
 
-        return $this->twig->render('Recipe/recipes.html.twig', ['recipes' => $recipes]);
+        return $this->twig->render('Recipe/recipes.html.twig', ['recipes' => $recipes,
+                                                                'ingredient' => $ingredient]);
     }
 
     /**
