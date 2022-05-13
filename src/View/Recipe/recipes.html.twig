@@ -1,0 +1,40 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block content %}
+
+	<main class="bg-cocktail container">
+		<h1 class="mt-5 mb-2 text-center text-cocktail">Recettes de l'ingrédient sélectionné :</h1>
+		<p></p>
+		 <pre>
+    </pre> 
+
+		<div class="container px-4 pb-5" id="hanging-icons">
+		<h2 class="pb-2 border-bottom text-center text-cocktail">{{ingredient.ingredient|title}}</h2>
+        <div class="container-fluid gap-2">
+		<div class="row py-5 row-cols-1 row-cols-lg-3 text-card-cocktail gy-3 gap-2 justify-content-evenly">
+        {% for recipe in recipes %}
+			<div class=" shadow col d-flex align-items-center justify-content-evenly bg-card-cocktail p-2 border border-curaçao text-card-cocktail">
+				<div class="icon-square flex-shrink-0 me-3 ">
+					<img class="bi cocktail-cardImage2" src="{{ recipe.recipe_image }}" alt="picture of {{ recipe.recipe_name }}">
+
+				</div>
+				<div class="d-grid justify-content-center m-auto">
+					<h2 class="text-center fs-5">{{ recipe.recipe_name|title }}</h2>
+					<a href="/recipes/show?id={{ recipe.recipe_id }}" class="btn-cocktail btn-cocktail-color">
+						Voir les recettes !
+					</a>
+				</div>
+			</div>
+        {% endfor %}
+		{% if recipes|length == 0 %}
+		<div class="alert alert-warning text-center mx-auto" role="alert">
+			Félicitation ! <br>
+			Tu as été désigné comme le Sam de la soirée ! <br>
+			<i>(pas encore de cocktail pour cet ingrédient)</i>
+		</div>
+		{% endif %}
+		</div>
+	</div>
+	</main>
+{% endblock %}

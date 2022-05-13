@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block content %}
+	<main class="container">
+		<h1 class="mt-5 mb-2 text-center text-cocktail">La recette</h1>
+		<div class="card m-5 shadow show-card mx-auto bg-card-cocktail border-curaçao">
+			<div class="d-flex flex-row flex-start align-items-center">
+				<img src="{{ recipe.image }}" class="card-img-top rounded img-thumbnail shadow cocktail-image m-4" alt="picture of a cocktail named {{ recipe.name }}">
+				<ul class="list-group list-group-flush mx-5">
+					<li class ="remove-bulletpoints">Ingrédients :</li>
+					{% for ingredient in ingredients %}
+						<li class="">{{ ingredient.ingredient_name }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="card-body">
+				<h2 class="card-title text-center mb-3">{{ recipe.name|title }}</h5>
+				<p class="card-text mx-4">{{ recipe.description }}</p>
+				<div class="d-flex justify-content-center">
+					<a href="/" class="btn-cocktail btn-cocktail-color my-4">Revenir à la liste des ingrédients</a>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}
