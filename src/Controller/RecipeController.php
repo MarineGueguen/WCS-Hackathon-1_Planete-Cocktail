@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\RecipeManager;
+use App\Model\IngredientRecipeManager;
 
 class RecipeController extends AbstractController
 {
