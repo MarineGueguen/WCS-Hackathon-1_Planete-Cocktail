@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Model\IngredientManager;
+use App\Model\MonthIngredientManager;
+use App\Model\MonthManager;
 
 class IngredientController extends AbstractController
 {
@@ -11,11 +13,67 @@ class IngredientController extends AbstractController
      */
     public function index(): string
     {
-        $ingredientManager = new IngredientManager();
-        $ingredients = $ingredientManager->selectAllIngredients('ingredient_name');
-        // var_dump($ingredients); die;
+        $monthManager = new MonthManager();
+        $monthIngredientManager = new MonthIngredientManager();
+        setlocale(LC_TIME, "fr_FR");
+        $month = date('m');
 
-        return $this->twig->render('Home/index.html.twig', ['ingredients' => $ingredients]);
+        switch ($month) {
+            case 1:
+                $month = $monthManager->selectOneById(1);
+                break;
+            case 2:
+                $month = $monthManager->selectOneById(2);
+                break;
+            case 3:
+                $month = $monthManager->selectOneById(3);
+                break;
+            case 4:
+                $month = $monthManager->selectOneById(4);
+                break;
+            case 5:
+                $month = $monthManager->selectOneById(5);
+                break;
+            case 6:
+                $month = $monthManager->selectOneById(6);
+                break;
+            case 7:
+                $month = $monthManager->selectOneById(7);
+                break;
+            case 8:
+                $month = $monthManager->selectOneById(8);
+                break;
+            case 9:
+                $month = $monthManager->selectOneById(9);
+                break;
+            case 10:
+                $month = $monthManager->selectOneById(10);
+                break;
+            case 11:
+                $month = $monthManager->selectOneById(11);
+                break;
+            case 12:
+                $month = $monthManager->selectOneById(12);
+                break;
+        }
+        $ingredients = $monthIngredientManager->selectAllIngredientsByMonthId($month['id']);
+
+        return $this->twig->render('Home/index.html.twig', ['ingredients' => $ingredients, 'month' => $month]);
+    }
+
+    public function indexByMonth(int $id): string
+    {
+        $monthManager = new MonthManager();
+        $monthIngredientManager = new MonthIngredientManager();
+        if ($id < 1) {
+            $id = 12;
+        } elseif ($id > 12) {
+            $id = 1;
+        }
+        $month = $monthManager->selectOneById($id);
+        $ingredients = $monthIngredientManager->selectAllIngredientsByMonthId($month['id']);
+
+        return $this->twig->render('Home/index.html.twig', ['ingredients' => $ingredients, 'month' => $month]);
     }
 
     /**

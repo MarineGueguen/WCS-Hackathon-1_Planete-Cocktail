@@ -11,8 +11,17 @@
     background-color: var(--very-pink);
 }
 
+.btn-bg-cocktail {
+    background-color: transparent;
+    border: transparent;
+    color: var(--white-russian);
+    margin-top: 2.6rem;
+    font-size: 2rem;
+}
+
 .bg-card-cocktail {
     background-color: var(--white-russian);
+    width: 400px;
 }
 
 .text-cocktail {
@@ -50,7 +59,16 @@ border-radius: 0.25rem;
 transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+
 .cocktail-cardImage {
     width: 10rem;
+
+.show-card {
+    width: 55rem;
+}
+
+.cocktail-image {
+    width: 25rem;
+
     height: auto;
 }
