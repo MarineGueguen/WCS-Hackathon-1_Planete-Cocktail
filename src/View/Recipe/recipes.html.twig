@@ -25,6 +25,13 @@
 				</div>
 			</div>
         {% endfor %}
+		{% if recipes|length == 0 %}
+		<div class="alert alert-warning text-center mx-auto" role="alert">
+			Félicitation ! <br>
+			Tu as été désigné comme le Sam de la soirée ! <br>
+			<i>(pas encore de cocktail pour cet ingrédient)</i>
+		</div>
+		{% endif %}
 		</div>
 	</div>
 	</main>

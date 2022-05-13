@@ -43,8 +43,10 @@ class RecipeController extends AbstractController
         $recipes = $recipeIngredientManager->selectAllRecipesByIngredientId($id);
         $ingredient = $ingredientManager->selectOneById($id);
 
-        return $this->twig->render('Recipe/recipes.html.twig', ['recipes' => $recipes,
-                                                                'ingredient' => $ingredient]);
+        return $this->twig->render('Recipe/recipes.html.twig', [
+            'recipes' => $recipes,
+            'ingredient' => $ingredient,
+        ]);
     }
 
     /**
