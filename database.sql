@@ -121,7 +121,7 @@ INSERT INTO ingredient (name, type_id, image) VALUES
 ('chou de Bruxelles', 2, '/assets/images/ingredients/icons8-drunk.svg'),
 ('gingembre', 2, '/assets/images/ingredients/icons8-drunk.svg'), 
 ('tomate', 1, '/assets/images/ingredients/icons8-tomato.svg'),
-('jus de tomate', 1, '/assets/images/ingredients/icons8-tomato-juice.svg'),
+('jus de tomate', 3, '/assets/images/ingredients/icons8-tomato-juice.svg'),
 ('menthe', 1, '/assets/images/ingredients/icons8-mint.svg'),
 ('abricot', 1, '/assets/images/ingredients/icons8-apricot.svg'),
 ('cassis', 1, '/assets/images/ingredients/icons8-cassis.svg'),
