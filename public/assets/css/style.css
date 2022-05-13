@@ -13,6 +13,7 @@
 
 .bg-card-cocktail {
     background-color: var(--white-russian);
+    width: 400px;
 }
 
 .text-cocktail {
