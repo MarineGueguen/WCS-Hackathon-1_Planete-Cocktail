@@ -47,4 +47,19 @@ class RecipeManager extends AbstractManager
 
         return $statement->execute();
     }
+
+    public function selectAllRecipesByIngredientId(int $id): array|false
+    {
+        $statement = $this->pdo->prepare('SELECT r.name AS recipe_name, r.image AS recipe_image, 
+        r.description AS recipe_steps, i.name AS ingredient_name
+        FROM ' . self::TABLE . ' AS ri
+        INNER JOIN recipe AS r
+        ON ri.recipe_id = r.id
+        WHERE ri.ingredient_id = :id');
+
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetchAll();
+    }
 }

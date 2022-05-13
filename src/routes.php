@@ -10,4 +10,5 @@ return [
     '' => ['IngredientController', 'index',],
     'month' => ['IngredientController', 'indexByMonth', ['id']],
     'recipes/show' => ['RecipeController', 'show', ['id']],
+    'recipes' => ['RecipeController', 'showRecipesByIngredient',['id']],
 ];
