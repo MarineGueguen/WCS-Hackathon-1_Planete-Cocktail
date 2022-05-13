@@ -7,6 +7,16 @@
     --very-pink: rgb(253, 169, 185);
 }
 
+@font-face {
+    font-family: KeeponTruckin;
+    src: url(/assets/Fonts/KeeponTruckin.ttf);
+  }
+
+.title-font {
+    font-family: KeeponTruckin;
+    font-size: 6rem;
+}
+
 .bg-cocktail {
     background-color: var(--very-pink);
 }
@@ -15,6 +25,14 @@
     background-color: transparent;
     border: transparent;
     color: var(--white-russian);
+    margin-top: 2.6rem;
+    font-size: 2rem;
+}
+
+.btn-bg-cocktail:hover {
+    background-color: transparent;
+    border: transparent;
+    color: var(--soft-curaçao);
     margin-top: 2.6rem;
     font-size: 2rem;
 }
