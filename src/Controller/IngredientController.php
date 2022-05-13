@@ -8,6 +8,11 @@ use App\Model\MonthManager;
 
 class IngredientController extends AbstractController
 {
+    public function welcome(): string
+    {
+        return $this->twig->render('Home/index1.html.twig');
+    }
+
     /**
      * List ingredients
      */

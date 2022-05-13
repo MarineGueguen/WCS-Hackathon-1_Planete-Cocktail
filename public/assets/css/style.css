@@ -19,6 +19,26 @@
     font-size: 2rem;
 }
 
+.btn-cover-cocktail {
+    background-color: var(--white-russian);
+    border: transparent;
+    color: var(--very-pink);
+    margin-top: 20rem;
+    font-size: 2rem;
+}
+
+.btn-cover-cocktail:hover {
+    background-color: var(--soft-curaçao);
+    border: transparent;
+    color: var(--very-pink);
+    margin-top: 20rem;
+    font-size: 2rem;
+}
+
+.cover-margin {
+    margin-top: 12%;
+}
+
 .bg-card-cocktail {
     background-color: var(--white-russian);
     width: 400px;
