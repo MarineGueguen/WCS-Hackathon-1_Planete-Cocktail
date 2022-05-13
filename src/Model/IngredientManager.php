@@ -11,19 +11,23 @@ class IngredientManager extends AbstractManager
      */
     public function selectAllIngredients(string $orderBy = '', string $direction = 'ASC'): array
     {
-        $query = 'SELECT i.id, i.name AS ingredient_name, i.type_id, i.image, t.name AS type_name, 
-        m.name AS month_name, r.name AS recipe_name, r.description, r.image AS cocktail 
-        FROM ' . static::TABLE . ' AS i
-        INNER JOIN type AS t 
-        ON i.type_id = t.id
-        INNER JOIN month_ingredient AS mi
-        ON mi.ingredient_id = i.id
-        INNER JOIN recipe_ingredient AS ri
-        ON ri.ingredient_id = i.id
-        INNER JOIN month AS m
-        ON mi.month_id = m.id
-        INNER JOIN recipe AS r
-        ON ri.recipe_id = r.id';
+        // $query = 'SELECT i.id, i.name AS ingredient_name, i.type_id, i.image, t.name AS type_name,
+        // m.name AS month_name, r.name AS recipe_name, r.description, r.image AS cocktail
+        // FROM ' . static::TABLE . ' AS i
+        // INNER JOIN type AS t
+        // ON i.type_id = t.id
+        // INNER JOIN month_ingredient AS mi
+        // ON mi.ingredient_id = i.id
+        // INNER JOIN recipe_ingredient AS ri
+        // ON ri.ingredient_id = i.id
+        // INNER JOIN month AS m
+        // ON mi.month_id = m.id
+        // INNER JOIN recipe AS r
+        // ON ri.recipe_id = r.id';
+        $query = 'SELECT i.id, i.name AS ingredient_name, i.type_id, t.name AS type_name, i.image, t.name AS type
+        FROM ingredient AS i
+        INNER JOIN type AS t
+        ON i.type_id = t.id';
         if ($orderBy) {
             $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
         }
