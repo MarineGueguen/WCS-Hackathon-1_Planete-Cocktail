@@ -17,6 +17,7 @@ class IngredientController extends AbstractController
         $monthIngredientManager = new MonthIngredientManager();
         setlocale(LC_TIME, "fr_FR");
         $month = date('m');
+        $error = '';
 
         switch ($month) {
             case 1:
@@ -57,8 +58,12 @@ class IngredientController extends AbstractController
                 break;
         }
         $ingredients = $monthIngredientManager->selectAllIngredientsByMonthId($month['id']);
+        if (empty($ingredients)) {
+            $error = "Ce mois-ci, ça va être difficile de manger cinq fruits et légumes par jour ...";
+        }
 
-        return $this->twig->render('Home/index.html.twig', ['ingredients' => $ingredients, 'month' => $month]);
+
+        return $this->twig->render('Home/index.html.twig', ['ingredients' => $ingredients, 'month' => $month, 'error' => $error]);
     }
 
     public function indexByMonth(int $id): string
