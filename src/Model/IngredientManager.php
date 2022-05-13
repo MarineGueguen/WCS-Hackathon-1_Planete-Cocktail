@@ -9,7 +9,7 @@ class IngredientManager extends AbstractManager
     /**
      * Select all ingredients in database
      */
-    public function selectAll(string $orderBy = '', string $direction = 'ASC'): array
+    public function selectAllIngredients(string $orderBy = '', string $direction = 'ASC'): array
     {
         $query = 'SELECT i.id, i.name AS ingredient, i.type_id, i.image, t.name AS type
         FROM ' . static::TABLE . ' AS i
