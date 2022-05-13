@@ -17,6 +17,9 @@
 		<div class="container-fluid">
 		<div class="row py-5 text-card-cocktail gy-3 gap-2 justify-content-evenly">
         {% for ingredient in ingredients %}
+		<pre>
+			{{ dump(ingredient) }}
+		</pre>
 			<div class="shadow col col-3 gap-2 d-flex align-items-center justify-content-evenly bg-card-cocktail p-2 border border-dark text-card-cocktail">
 				<div class="icon-square flex-shrink-0 me-3">
 					<img class="bi" src="{{ ingredient.ingredient_image }}" alt="picture of {{ ingredient.ingredient_name }}">
@@ -24,7 +27,7 @@
 				<div class="text-center">
 					<h2 class="text-center">{{ ingredient.ingredient_name|title }}</h2>
 					<p class="text-center">{{ ingredient.type_name|title }}</p>
-					<a href="/recipes?id={{ ingredient.id }}" class="btn-cocktail btn-cocktail-color ">
+					<a href="/recipes?id={{ ingredient.ingredient_id }}" class="btn-cocktail btn-cocktail-color ">
 						Voir les recettes !
 					</a>
 				</div>
