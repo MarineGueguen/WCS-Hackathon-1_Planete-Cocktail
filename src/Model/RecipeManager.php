@@ -11,7 +11,7 @@ class RecipeManager extends AbstractManager
      */
     public function searchRecipesByName(string $recipe): array|false
     {
-        $statement = $this->pdo->prepare("SELECT * " . self::TABLE . " WHERE name LIKE :name");
+        $statement = $this->pdo->prepare("SELECT * FROM " . self::TABLE . " WHERE name LIKE :name");
         $statement->bindValue('name', '%' . $recipe . '%', \PDO::PARAM_STR);
         $statement->execute();
 

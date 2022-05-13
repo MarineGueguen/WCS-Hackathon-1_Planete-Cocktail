@@ -22,12 +22,15 @@ class IngredientManager extends AbstractManager
     }
 
     /**
-     * Search recipe in database
+     * Search ingredient in database
      */
-    public function searchRecipesByName(string $ingredient): array|false
+    public function searchIngredientByName(string $ingredient): array|false
     {
-        $statement = $this->pdo->prepare("SELECT i.id, i.name AS ingredient, i.type_id, i.image, t.name AS type 
-        FROM " . self::TABLE . " WHERE name LIKE :name");
+        $statement = $this->pdo->prepare("SELECT i.name AS ingredient, i.type_id, i.image, t.name AS type 
+        FROM " . static::TABLE . " AS i 
+        INNER JOIN type AS t
+        ON i.type_id = t.id
+        WHERE i.name LIKE :name AND i.type_id != 3");
         $statement->bindValue('name', '%' . $ingredient . '%', \PDO::PARAM_STR);
         $statement->execute();
 
